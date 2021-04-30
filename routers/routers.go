@@ -1,6 +1,7 @@
 package routers
 
 import (
+	clinicsService "coding-challenge/clinics"
 	"coding-challenge/middleware"
 	"encoding/json"
 	"fmt"
@@ -13,6 +14,9 @@ func InitRoutes() *mux.Router {
 	router := mux.NewRouter()
 	//Default Router
 	router.HandleFunc("/", middleware.SetMiddlewareJSON(defaultRouterHandler)).Methods("GET")
+
+	// Clinics Router
+	clinicsService.SetClinicRoutes(router)
 	return router
 }
 

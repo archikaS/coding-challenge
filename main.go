@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	/* Set Env it will be accessable anywhere in app
+	/* Set Env it will be accessible anywhere in app
 	a) For production use keyword "Production"
 	b) For staging use keyword "Staging"
 	c) For development use keyword "Development" */
